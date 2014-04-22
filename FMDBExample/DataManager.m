@@ -30,10 +30,12 @@ static NSString * const DEFAULT_DB_PATH = @"my.db";
         NSString *fullPath = domains[0];
         _dbFilePath = [[fullPath stringByAppendingPathComponent:DEFAULT_DB_PATH] copy];
         _database = [[FMDatabase alloc]initWithPath:_dbFilePath];
+        [self p_initSchema];
+        
         //database queue
         _dbQueue = [FMDatabaseQueue databaseQueueWithPath:_dbFilePath];
 
-        [self p_initSchema];
+     
     }
     return self;
 }
@@ -46,10 +48,12 @@ static NSString * const DEFAULT_DB_PATH = @"my.db";
         NSString *fullPath = domains[0];
         _dbFilePath = [[fullPath stringByAppendingPathComponent:path] copy];
         _database = [[FMDatabase alloc]initWithPath:_dbFilePath];
+        [self p_initSchema];
+        
         //database queue
         _dbQueue = [FMDatabaseQueue databaseQueueWithPath:_dbFilePath];
 
-        [self p_initSchema];
+        
     }
     return self;
 }
