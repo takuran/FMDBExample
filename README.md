@@ -8,5 +8,6 @@ FMDBExample is an Example application.
 
 ### To initialize submodule, run the following command
 `$ cd FMDBExample`
+
 `$ git submodule update --init --recursive`
 
